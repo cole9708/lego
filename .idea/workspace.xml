@@ -498,7 +498,11 @@
       <created>1459845630883</created>
       <updated>1459845630883</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="get term from config file fix">
+      <created>1459846928505</created>
+      <updated>1459846928505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
