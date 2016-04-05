@@ -1,7 +1,7 @@
 require 'waitutil'
 
 module TestWorld
-  def nohs
+  def lego
     @app
   end
 

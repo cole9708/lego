@@ -14,6 +14,9 @@ When(/^I search for (.+) item$/) do |search_term|
   @search_term = GenericHelpers.product_configs['product_type'][search_term] || search_term
   @app.home.header.search_bar.set @search_term
   @app.home.header.search_icon_submit.click
-  binding.pry
+end
+
+Given (/^I am on the search results pahe$/)do
+
 
 end
