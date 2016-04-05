@@ -13,4 +13,13 @@ Feature: As a Customer
 
      Scenario:
        Given I am on the search results page for Millennium
+       When I select the product the product on the search results page
+       Then I should be taken to the product details page
+
+       Scenario:
+         Given I Navigate to the millenium product details page
+         When I select to add the item
+         Then the item is added to the basket
+
+         Given I navigate to the basket
 
