@@ -5,14 +5,18 @@ module Lego
   module PageObjects
     module Pages
       class SearchResults < SitePrism::Page
-        set_url_matcher /\?q=[\w]*&cc=/
+        set_url_matcher /\?q=.*&cc=UK/
 
 
-        element :search_title, '.main_search'
+        element :search_title, '#main_search'
 
-        section :results_tab, Lego::PageObjects::Sections::ResultsTab, '.results_main'
+        section :results_tab, Lego::PageObjects::Sections::ResultsTab, '#results_main'
 
       end
     end
   end
+
+ # def search_results
+  #  SearchResults.new
+ # end
 end

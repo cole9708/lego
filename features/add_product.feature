@@ -11,3 +11,6 @@ Feature: As a Customer
      When I search for Millennium item
      Then I should be taken to the search results page
 
+     Scenario:
+       Given I am on the search results page for Millennium
+
