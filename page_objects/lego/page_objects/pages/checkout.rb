@@ -2,10 +2,11 @@ module Lego
   module PageObjects
     module Pages
       class Checkout < SitePrism::Page
-        set_url '/cart/shoppingCart.jsp'
+        set_url 'http://shop.lego.com/en-GB/cart/shoppingCart.jsp'
         set_url_matcher /\/cart\/shoppingCart.jsp/
 
         element :title, '#main #column-1 .page-header-icon'
+        section :checkout_overlay, Lego::PageObjects::Sections::CheckoutOverlay, '#shopModalDialog'
 
 
         #section :footer, Base::Footer, '.footer'

@@ -77,8 +77,26 @@ Then (/^I should be taken to the checkout page$/)do
 expect(@app.checkout).to be_displayed
 end
 
+Given (/^I navigate to the basket page$/)do
+  @app.checkout.load
+end
 
 And (/^the Millennium item should be in the basket$/)do
   my_items =@app.checkout.shopping_bag.product_detail.each { |item| puts item}
   expect(my_items.first.text).to include 'Millennium Falcon'
+end
+
+When (/^I select to checkout from the basket$/)do
+  @app.checkout.shopping_bag.select_checkout_from_basket
+end
+
+Then (/^sign in overlay is displayed$/)do
+  @app.checkout.wait_for_checkout_overlay
+  expect(@app.checkout).to have_checkout_overlay
+end
+
+When (/^I select to checkout as a guest user$/)do
+  @app.checkout.load
+  @app.checkout.shopping_bag.select_checkout_from_basket
+  @app.checkout.checkout_overlay.select_guest
 end

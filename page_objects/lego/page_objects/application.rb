@@ -38,6 +38,10 @@ module Lego
       def checkout
         @pages[:checkout] ||=Lego::PageObjects::Pages::Checkout.new
       end
+
+      def checkout_overlay
+        @sections[:checkout_overlay] ||=Lego::PageObjects::Pages::CheckoutOverlay.new
+      end
       #def lefthandnav
        # @sections[:lefthandnav] ||=Lego::PageObjects::Sections::LeftHandNav.new
       #end
