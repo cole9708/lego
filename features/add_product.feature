@@ -21,21 +21,21 @@ Feature: As a Customer
     When I select to add the item to the basket
     Then the item is added to the basket
 
-    Scenario: select to checkout item
+  Scenario: select to checkout item
     Given I have the Millennium product in my basket
     When I select to checkout
     Then I should be taken to the checkout page
     And the Millennium item should be in the basket
 
-      Scenario: basket checkout
-        Given I have the Millennium product in my basket
-        And I navigate to the basket page
-        When I select to checkout from the basket
-        Then sign in overlay is displayed
+  Scenario: basket checkout
+    Given I have the Millennium product in my basket
+    And I navigate to the basket page
+    When I select to checkout from the basket
+    Then sign in overlay is displayed
 
-        Scenario: checkout as guest user
-          Given I have the Millennium product in my basket
-          When I select to checkout as a guest user
+  Scenario: checkout as guest user
+    Given I have the Millennium product in my basket
+    When I select to checkout as a guest user
 
 
 

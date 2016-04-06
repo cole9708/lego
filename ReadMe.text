@@ -1,0 +1,1 @@
+to run report cucumber --format html -o features/reports/report.html
