@@ -18,6 +18,10 @@ module Lego
           product_title.click
         end
 
+        def select_to_checkout
+            checkout.click
+        end
+
 
         section :top_nav, Lego::PageObjects::Sections::TopNav
       end

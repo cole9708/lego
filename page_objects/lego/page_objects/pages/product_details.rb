@@ -20,6 +20,8 @@ module Lego
           ProductDetails.new
         end
 
+
+
       end
 
     end

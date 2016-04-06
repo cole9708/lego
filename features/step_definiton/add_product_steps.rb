@@ -42,7 +42,7 @@ When(/^I select the product the product on the search results page$/)do
 
 end
 
-Given (/^I Navigate to the millenium product details page$/)do
+Given (/^I Navigate to the Millennium product details page$/)do
   @app.product_details.load
   @app.product_details.about_product_details.wait_for_add_to_cart
   @items_in_basket = @app.product_details.top_nav.no_items.text.scan(/\d+/)
@@ -59,6 +59,26 @@ Then (/^the item is added to the basket$/)do
   expect(@items_in_basket).to_not eql @current_items_in_basket
 end
 
+Given (/^I have the Millennium product in my basket$/)do
+  @app.product_details.load
+  @app.product_details.about_product_details.wait_for_add_to_cart
+  @items_in_basket = @app.product_details.top_nav.no_items.text.scan(/\d+/)
+  @app.product_details.about_product_details.wait_for_add_to_cart
+  @app.product_details.about_product_details.add_to_cart.click
+  @current_items_in_basket = @app.product_details.top_nav.checkout.text.scan(/\d+/)
+  expect(@items_in_basket).to_not eql @current_items_in_basket
+end
+
+When (/^I select to checkout$/)do
+  @app.product_details.top_nav.select_to_checkout
+end
+
+Then (/^I should be taken to the checkout page$/)do
+expect(@app.checkout).to be_displayed
+end
 
 
-
+And (/^the Millennium item should be in the basket$/)do
+  my_items =@app.checkout.shopping_bag.product_detail.each { |item| puts item}
+  expect(my_items.first.text).to include 'Millennium Falcon'
+end

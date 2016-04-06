@@ -13,6 +13,8 @@ module Lego
           product_title.text
         end
 
+
+
         section :about_product_details, Lego::PageObjects::Sections::AboutProductDetails
       end
     end

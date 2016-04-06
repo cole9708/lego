@@ -11,15 +11,21 @@ Feature: As a Customer
     When I search for Millennium item
     Then I should be taken to the search results page
 
-  Scenario: taketo product details page
+  Scenario: take to product details page
     Given I am on the search results page for Millennium
     When I select the product the product on the search results page
     Then I should be taken to the product details page
 
   Scenario:
-    Given I Navigate to the millenium product details page
+    Given I Navigate to the Millennium product details page
     When I select to add the item to the basket
     Then the item is added to the basket
+
+    Scenario: checkout
+    Given I have the Millennium product in my basket
+    When I select to checkout
+    Then I should be taken to the checkout page
+    And the Millennium item should be in the basket
 
 
 

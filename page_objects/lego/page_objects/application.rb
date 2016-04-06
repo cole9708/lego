@@ -30,6 +30,14 @@ module Lego
       def top_nav
         @sections[:top_nav] ||=Lego::PageObjects::Sections::TopNav.new
       end
+
+      def shopping_bag
+        @sections[:shopping_bag] ||=Lego::PageObjects::Sections::ShoppingBag.new
+      end
+
+      def checkout
+        @pages[:checkout] ||=Lego::PageObjects::Pages::Checkout.new
+      end
       #def lefthandnav
        # @sections[:lefthandnav] ||=Lego::PageObjects::Sections::LeftHandNav.new
       #end
