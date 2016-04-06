@@ -16,6 +16,13 @@ When(/^I search for (.+) item$/) do |search_term|
   @app.home.header.search_icon_submit.click
 end
 
+Given(/^I want to load the site using (.+) locale$/) do |locale|
+  @locale = GenericHelpers.locale_configs[locale] || locale
+  $BASE_URL = @locale['url']
+  Capybara.app_host = @locale['url']
+  @app.home.load
+end
+
 Given (/^I am on the search results page for (.+)$/)do|search_term|
   @app.home.load
   @search_term = GenericHelpers.product_configs['product_type'][search_term] || search_term

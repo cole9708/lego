@@ -38,6 +38,16 @@ Feature: As a Customer
     When I select to checkout as a guest user
 
 
+    Scenario Outline: multiple locales
+      Given I want to load the site using <country> locale
+      When I search for Millennium item
+      Then I should be taken to the search results page
+      Examples:
+        |country|
+        |lego_gb|
+        |lego_de|
+
+
 
 
 

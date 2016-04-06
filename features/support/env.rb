@@ -17,11 +17,13 @@ require 'yaml'
 
 ENV['TEST_ENV'] ||= 'lego_gb'
 project_root = File.expand_path('../..', __FILE__)
-$BASE_URL = YAML.load_file(project_root + "/config/config.yml")[ENV['TEST_ENV']][:url]
+$BASE_URL = YAML.load_file(project_root + "/config/config.yml")[ENV['TEST_ENV']]['url']
 
-ENV['TEST_ENV'] ||= 'lego_gb'
+ENV['TEST_ENV'] ||= 'lego_de'
 project_root = File.expand_path('../..', __FILE__)
-$BASE_URL = YAML.load_file(project_root + "/config/config.yml")[ENV['TEST_ENV']][:url]
+$BASE_URL = YAML.load_file(project_root + "/config/config.yml")[ENV['TEST_ENV']]['url']
+
+
 
 
 

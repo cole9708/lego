@@ -7,6 +7,9 @@ module GenericHelpers
     YamlManager.load_config_yml('products')
   end
 
+  def locale_configs
+    YamlManager.load_config_yml('config')
+  end
 
   end
 

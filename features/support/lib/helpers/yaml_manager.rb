@@ -10,6 +10,7 @@ class YamlManager
     load_yaml_file_in_dir('config', file_name)
   end
 
+
   def self.load_yaml_file_in_dir(dirname, yaml_file_name)
     yml = YAML.load_file(File.join(project_root, dirname, "#{yaml_file_name}.yml"))
     yml

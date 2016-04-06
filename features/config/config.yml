@@ -1,5 +1,5 @@
 lego_gb:
-    :url: http://www.lego.com/en-gb
+    url: http://www.lego.com/
 
 lego_de:
-    :url: http://www.lego.com/de-GB
+    url: http://www.lego.de/
