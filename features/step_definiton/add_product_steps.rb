@@ -21,11 +21,37 @@ Given (/^I am on the search results page for (.+)$/)do|search_term|
   @search_term = GenericHelpers.product_configs['product_type'][search_term] || search_term
   @app.home.header.search_bar.set @search_term
   @app.home.header.search_icon_submit.click
+  @app.search_results.results_tab.wait_for_product_result_items
+  expect(@app.search_results.results_tab.product_result_items.size < 2).to eql true
+  @app.search_results.results_tab.product_result_items.each do |result|
+   # expect(result.text).to include(@search_term.gsub('-',' '))
+    result.text.should include('Millennium')
+  end
+  @app.search_results.results_tab.select_item
 end
 
 Then (/^I should be taken to the search results page$/)do
-  binding.pry
   expect(@app.search_results).to be_displayed
- # expect(@app.search_results).to have_search_title
-  binding.pry
 end
+
+Then (/^I should be taken to the product details page$/)do
+  expect(@app.product_details).to be_displayed
+end
+
+Given (/^I Navigate to the millenium product details page$/)do
+  @app.product_details.load
+  @app.product_details.about_product_details.wait_for_add_to_cart
+  @items_in_basket = @app.product_details.top_nav.no_items.text.scan(/\d+/)
+end
+
+When (/I select to add the item to the basket$/)do
+  @app.product_details.about_product_details.wait_for_add_to_cart
+  @app.product_details.about_product_details.add_to_cart.click
+  @current_items_in_basket = @app.product_details.top_nav.checkout.text.scan(/\d+/)
+  binding.pry
+  expect(@items_in_basket).to_not eql @current_items_in_basket
+end
+
+
+
+

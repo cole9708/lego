@@ -9,6 +9,7 @@ require 'capybara/helpers'
 require 'rspec'
 require 'pry'
 require 'require_all'
+require 'waitutil'
 
 require_all 'page_objects/**/*.rb'
 

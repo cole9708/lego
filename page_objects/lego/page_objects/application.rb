@@ -5,7 +5,6 @@ module Lego
       def initialize
         @pages ={}
         @sections ={}
-
       end
 
       def home
@@ -22,6 +21,14 @@ module Lego
 
       def results_tab
         @sections[:results_tab] ||=Lego::PageObjects::Sections::ResultsTab.new
+      end
+
+      def about_product_details
+        @sections[:about_product_details] ||=Lego::PageObjects::Sections::AboutProductDetails.new
+      end
+
+      def top_nav
+        @sections[:top_nav] ||=Lego::PageObjects::Sections::TopNav.new
       end
       #def lefthandnav
        # @sections[:lefthandnav] ||=Lego::PageObjects::Sections::LeftHandNav.new
