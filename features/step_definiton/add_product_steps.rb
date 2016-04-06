@@ -27,7 +27,6 @@ Given (/^I am on the search results page for (.+)$/)do|search_term|
    # expect(result.text).to include(@search_term.gsub('-',' '))
     result.text.should include('Millennium')
   end
-  @app.search_results.results_tab.select_item
 end
 
 Then (/^I should be taken to the search results page$/)do
@@ -36,6 +35,11 @@ end
 
 Then (/^I should be taken to the product details page$/)do
   expect(@app.product_details).to be_displayed
+end
+
+When(/^I select the product the product on the search results page$/)do
+  @app.search_results.results_tab.select_item
+
 end
 
 Given (/^I Navigate to the millenium product details page$/)do
@@ -48,7 +52,10 @@ When (/I select to add the item to the basket$/)do
   @app.product_details.about_product_details.wait_for_add_to_cart
   @app.product_details.about_product_details.add_to_cart.click
   @current_items_in_basket = @app.product_details.top_nav.checkout.text.scan(/\d+/)
-  binding.pry
+
+end
+
+Then (/^the item is added to the basket$/)do
   expect(@items_in_basket).to_not eql @current_items_in_basket
 end
 
