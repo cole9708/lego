@@ -14,7 +14,7 @@ module Lego
         #section :delievery, Base::Delievery, '#delivery_seller'
         #section :purchaseModule, Base::PurchaseModule, '.purchase_module'
 
-        section :shopping_bag, Lego::PageObjects::Sections::ShoppingBag, '#shopping-bag-section'
+        section :shopping_bag, Lego::PageObjects::Sections::ShoppingBag, 'div#shopping-bag-section'
 
 
         def checkout

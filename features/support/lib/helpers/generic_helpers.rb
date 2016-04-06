@@ -11,5 +11,5 @@ module GenericHelpers
     YamlManager.load_config_yml('config')
   end
 
-  end
+end
 

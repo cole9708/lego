@@ -39,8 +39,16 @@ module Lego
         @pages[:checkout] ||=Lego::PageObjects::Pages::Checkout.new
       end
 
+      def delivery_form
+        @pages[:delivery_form] ||=Lego::PageObjects::Pages::DeliveryForm.new
+      end
+
       def checkout_overlay
         @sections[:checkout_overlay] ||=Lego::PageObjects::Pages::CheckoutOverlay.new
+      end
+
+      def address_suggestion_overlay
+        @sections[:address_suggestion_overlay] ||=Lego::PageObjects::Pages::AddressSuggestionOverlay.new
       end
       #def lefthandnav
        # @sections[:lefthandnav] ||=Lego::PageObjects::Sections::LeftHandNav.new

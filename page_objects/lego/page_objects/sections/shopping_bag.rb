@@ -12,9 +12,6 @@ module Lego
         end
 
 
-
-
-
         section :shopping_bag, Lego::PageObjects::Sections::ShoppingBag
       end
     end

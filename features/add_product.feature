@@ -36,16 +36,31 @@ Feature: As a Customer
   Scenario: checkout as guest user
     Given I have the Millennium product in my basket
     When I select to checkout as a guest user
+    Then I should be taken to the delivery form page
+
+  Scenario: enter address delivery details
+    Given I have checked out from the basket
+    When I have entered valid delivery details
+    And submit the delivery address
+    Then no delivery address errors should be displayed
+    And I select suggestion delivery address
+    And I submit payment details
+
+  Scenario: enter address delivery details
+    Given I have checked out from the basket
+    When I have entered invalid delivery details
+    And submit the delivery address
+    Then a delivery address errors should be displayed
 
 
-    Scenario Outline: multiple locales
-      Given I want to load the site using <country> locale
-      When I search for Millennium item
-      Then I should be taken to the search results page
-      Examples:
-        |country|
-        |lego_gb|
-        |lego_de|
+  Scenario Outline: multiple locales
+    Given I want to load the site using <country> locale
+    When I search for Millennium item
+    Then I should be taken to the search results page
+  Examples:
+    | country |
+    | lego_gb |
+    | lego_de |
 
 
 

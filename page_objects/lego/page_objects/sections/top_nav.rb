@@ -3,11 +3,10 @@ module Lego
     module Sections
       class TopNav < SitePrism::Section
 
-        element :checkout, 'li#shopnav-minibag .lnk-checkout'
+        element :checkout, 'li#shopnav-minibag'
         element :no_items, 'li#shopnav-minibag'
 
         elements :product_result_items, 'ul#product-results li.product-thumbnail.test-product'
-
 
 
         def name
@@ -19,7 +18,7 @@ module Lego
         end
 
         def select_to_checkout
-            checkout.click
+          checkout.click
         end
 
 

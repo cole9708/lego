@@ -1,0 +1,20 @@
+class User
+  attr_accessor :email
+  attr_accessor :password
+  attr_accessor :address_nickname
+  attr_accessor :phone_number
+  attr_accessor :title
+  attr_accessor :first_name
+  attr_accessor :last_name
+  attr_accessor :clubcard_number
+  attr_accessor :marketing_content_selected
+  attr_accessor :confirm_password
+  attr_accessor :address_1
+  attr_accessor :address_2
+  attr_accessor :address_3
+  attr_accessor :address_4
+  attr_accessor :address_5
+  attr_accessor :address_6
+  attr_accessor :address_7
+  attr_accessor :address_8
+end
