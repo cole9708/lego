@@ -7,15 +7,21 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="RVM: ruby-2.2.2" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.2.6, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.4.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="archive-zip (v0.7.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.2, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.11.2, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v2.6.2, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.5.9, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="chromedriver-helper (v1.0.0, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.1, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber (v2.3.3, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cucumber-core (v1.4.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cucumber-wire (v0.0.1, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.2.5, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.10, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="gherkin (v3.2.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="io-like (v0.3.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, RVM: ruby-2.2.2) [gem]" level="application" />
@@ -23,6 +29,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v3.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2016.0221, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_portile2 (v2.0.0, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.8.4, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.2, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_test (v0.1.2, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.6.7.2, RVM: ruby-2.2.2) [gem]" level="application" />
@@ -30,12 +37,17 @@
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.10.3, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.4, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v11.1.2, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="require_all (v1.3.3, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec (v3.4.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-collection_matchers (v1.1.2, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.4.4, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.4.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.4.1, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.4.1, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.2.0, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v2.53.0, RVM: ruby-2.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="site_prism (v2.9, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.6.0, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, RVM: ruby-2.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v1.2.2, RVM: ruby-2.2.2) [gem]" level="application" />

@@ -14,7 +14,7 @@ module Lego
         element :phone_number_field, 'input.test-shippingPhoneNumber'
         element :submit_delivery_details, 'input#btn-submit-shipping'
         element :delivery_error, 'div.shop-notice.form-error'
-        element :same_delivery_checkbox, 'imput#chk-billingSameAsShipping'
+        element :same_delivery_checkbox, 'input#chk-billingSameAsShipping'
         element :billing_email, 'input.billingEmail.test-billingEmail'
         element :card_number, 'input#Paymetric_CreditCardNumber'
         element :card_month, 'input#Paymetric_Exp_Month'
@@ -22,6 +22,7 @@ module Lego
         element :card_cvv, 'input#Paymetric_CVV'
         element :pay_now, 'input#PayNowButton'
         element :submit_billing, 'input#btn-submit-billing'
+        element :suggestion_button, '#qasRefinementSubmit'
 
         section :address_suggestion_overlay, Lego::PageObjects::Sections::AddressSuggestionOverlay, 'div#shopModalDialogContainer'
 
@@ -32,6 +33,22 @@ module Lego
         def set_billing_email
           billing_email.set 'cole9708@googlemmail.com'
         end
+
+        def click_overlay_address
+          within_frame(find('.shopDialogContent #shopModal')) do
+            suggestion_button.click
+          end
+
+          def insert_payment
+            within_frame(find('iframe#di-eComm-iFrame'))do
+              card_number.set '0000000000000000'
+              card_month.set '12'
+              card_year.set '16'
+              card_cvv.set '123'
+            end
+          end
+
+          end
 
         def set_valid_user_details
           wait_for_first_name_field

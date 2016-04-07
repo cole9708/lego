@@ -1,3 +1,4 @@
+@add_to_basket
 Feature: As a Customer
   I want to be able to add items to my basket
   So that I can purchase them
@@ -37,7 +38,7 @@ Feature: As a Customer
     Given I have the Millennium product in my basket
     When I select to checkout as a guest user
     Then I should be taken to the delivery form page
-
+@submit_address
   Scenario: enter address delivery details
     Given I have checked out from the basket
     When I have entered valid delivery details

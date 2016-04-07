@@ -170,14 +170,14 @@ end
 
 And (/^I submit payment details$/) do
   @app.delivery_form.wait_for_address_suggestion_overlay
-  FormHelpers.submit_form
-  @app.delivery_form.address_suggestion_overlay.select_suggestion_address
+  @app.delivery_form.click_overlay_address
+  sleep 2
+  @app.delivery_form.wait_for_same_delivery_checkbox
   @app.delivery_form.set_billing_check
+  sleep 2
   @app.delivery_form.set_billing_email
-  @app.delivery_form.set_card_details
-  @app.delivery_form.pay_now.click
-  sleep 1
-  @app.delivery_form.submit_billing.click
+  @app.delivery_form.wait_for_card_number
+  @app.delivery_form.insert_payment
 end
 
 
