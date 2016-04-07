@@ -147,30 +147,30 @@ Given(/^I have checked out from the basket$/) do
   @app.checkout.checkout_overlay.select_guest
 end
 
-When (/^submit the delivery address$/)do
-@app.delivery_form.submit_delivery_details.click
+When (/^submit the delivery address$/) do
+  @app.delivery_form.submit_delivery_details.click
   sleep 2
 end
 
-Then (/^a delivery address errors should be displayed$/)do
+Then (/^a delivery address errors should be displayed$/) do
   expect(@app.delivery_form).to have_delivery_error
 end
 
-Then (/^no delivery address errors should be displayed$/)do
+Then (/^no delivery address errors should be displayed$/) do
   expect(@app.delivery_form).to_not have_delivery_error
 end
 
-Then(/^I select suggestion delivery address$/)do
+Then(/^I select suggestion delivery address$/) do
   @app.delivery_form.address_suggestion_overlay.select_suggestion_address
 end
 
-Then(/^select delivery checkbox$/)do
+Then(/^select delivery checkbox$/) do
   @app.delivery_form.set_billing_check
 end
 
-And (/^I submit payment details$/)do
-  binding.pry
+And (/^I submit payment details$/) do
   @app.delivery_form.wait_for_address_suggestion_overlay
+  FormHelpers.submit_form
   @app.delivery_form.address_suggestion_overlay.select_suggestion_address
   @app.delivery_form.set_billing_check
   @app.delivery_form.set_billing_email
