@@ -37,10 +37,12 @@ Given (/^I am on the search results page for (.+)$/) do |search_term|
 end
 
 Then (/^I should be taken to the search results page$/) do
+  sleep 2
   expect(@app.search_results).to be_displayed
 end
 
 Then (/^I should be taken to the product details page$/) do
+  sleep 2
   expect(@app.product_details).to be_displayed
 end
 
@@ -86,6 +88,7 @@ When (/^I select to checkout$/) do
 end
 
 Then (/^I should be taken to the checkout page$/) do
+  sleep 2
   expect(@app.checkout).to be_displayed
 end
 
@@ -114,6 +117,7 @@ When (/^I select to checkout as a guest user$/) do
 end
 
 Then(/^I should be taken to the delivery form page$/) do
+  sleep 2
   expect(@app.delivery_form).to be_displayed
 end
 

@@ -43,7 +43,6 @@ Feature: As a Customer
     When I have entered valid delivery details
     And submit the delivery address
     Then no delivery address errors should be displayed
-    And I select suggestion delivery address
     And I submit payment details
 
   Scenario: enter address delivery details

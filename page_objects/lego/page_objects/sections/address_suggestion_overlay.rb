@@ -4,10 +4,6 @@ module Lego
       class AddressSuggestionOverlay < SitePrism::Section
 
         element :suggestion_button, 'input#qasRefinementSubmit.btn-big.orange.test-acceptQASSuggestion'
-        element :add_to_cart, 'button#addToCart'
-
-        elements :product_result_items, 'ul#product-results li.product-thumbnail.test-product'
-
 
         def select_suggestion_address
           suggestion_button.click

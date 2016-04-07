@@ -30,7 +30,7 @@ $BASE_URL = YAML.load_file(project_root + "/config/config.yml")[ENV['TEST_ENV']]
 Capybara.register_driver(:chrome)   { |app| Capybara::Selenium::Driver.new(app, :browser => :chrome) }
 Capybara.register_driver(:firefox)  { |app| Capybara::Selenium::Driver.new(app, :browser => :firefox) }
 
-
+Capybara.ignore_hidden_elements = true
 Capybara.configure do |config|
   config.default_driver = :firefox
 
