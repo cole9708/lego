@@ -7,10 +7,10 @@ module Lego
 
 
         element :title, 'li#shipping-address-section h2'
-        element :first_name_field,  'input.test-shippingFirstName'
+        element :first_name_field, 'input.test-shippingFirstName'
         element :last_name_field, 'input.test-shippingLastName'
         element :house_number_field, 'input.test-shippingAddress1'
-        element :post_code_field,'input.test-shippingPostalCode'
+        element :post_code_field, 'input.test-shippingPostalCode'
         element :phone_number_field, 'input.test-shippingPhoneNumber'
         element :submit_delivery_details, 'input#btn-submit-shipping'
         element :delivery_error, 'div.shop-notice.form-error'
@@ -40,7 +40,7 @@ module Lego
           end
 
           def insert_payment
-            within_frame(find('iframe#di-eComm-iFrame'))do
+            within_frame(find('iframe#di-eComm-iFrame')) do
               card_number.set '0000000000000000'
               card_month.set '12'
               card_year.set '16'
@@ -48,7 +48,7 @@ module Lego
             end
           end
 
-          end
+        end
 
         def set_valid_user_details
           wait_for_first_name_field
@@ -74,8 +74,6 @@ module Lego
           post_code_field.set 'n18 2ba**12'
           phone_number_field.set '07984878953'
         end
-
-
 
 
         def delivery_form
